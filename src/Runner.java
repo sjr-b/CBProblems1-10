@@ -23,22 +23,23 @@ public class Runner {
         System.out.println(countTriple("1234")); // should be 0
 
         // array one
-//        System.out.println(makeEnds(int[1,2,3]));
+        int [] test = {1, 2, 3};
+        System.out.println(makeEnds(test)); // should be 1, 3
 //        System.out.println(makeEnds());
 //
 //        // array two
 //        System.out.println(isEverywhere());
-//        System.out.println();
+//        System.out.println(isEverywhere());
 //
 //        // array three
-//        System.out.println(countTriple());
-//        System.out.println();
+//        System.out.println(seriesUp());
+//        System.out.println(seriesUp());
 
         // logic one
         System.out.println(greenTicket(1,2,3)); // should be 0
         System.out.println(greenTicket(1,1,2)); // should be 10
         System.out.println(greenTicket(1,1,1)); //should be 20
-        
+
         // logic two
         System.out.println(makeChocolate(4, 1, 9)); // should be 4
         System.out.println(makeChocolate(4,1,7)); // should be 2
