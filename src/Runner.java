@@ -1,10 +1,12 @@
+import java.util.Arrays;
+
 public class Runner {
 
     public static void main(String[] args) {
 
         // warm-up one
-        System.out.println(stringE("screen")); // should betrue
-        System.out.println(stringE("electee")); // false
+        System.out.println(stringE("screen")); // should be true
+        System.out.println(stringE("electee")); // should be false
 
         // warm-up two
         System.out.println(doubleX("exxxxx")); // should be true
@@ -23,17 +25,19 @@ public class Runner {
         System.out.println(countTriple("1234")); // should be 0
 
         // array one
-        int [] test = {1, 2, 3};
-        System.out.println(makeEnds(test)); // should be 1, 3
-//        System.out.println(makeEnds());
-//
-//        // array two
-//        System.out.println(isEverywhere());
-//        System.out.println(isEverywhere());
-//
-//        // array three
-//        System.out.println(seriesUp());
-//        System.out.println(seriesUp());
+        int [] arrOneFirst = {1, 2, 3};
+        System.out.println(Arrays.toString(makeEnds(arrOneFirst))); // should be [1, 3]
+        int [] arrOneSecond = {7};
+        System.out.println(Arrays.toString(makeEnds(arrOneSecond))); // should be [7, 7]
+
+        // array two
+        int [] arrTwo = {1, 2, 1, 3};
+        System.out.println(isEverywhere(arrTwo, 1)); // should be true
+        System.out.println(isEverywhere(arrTwo, 2)); // should be false
+
+        // array three
+        System.out.println(Arrays.toString(seriesUp(1))); // should be [1]
+        System.out.println(Arrays.toString(seriesUp(5))); // should be [1, 1, 2, 1, 2, 3, 1, 2, 3, 4, 1, 2, 3, 4, 5]
 
         // logic one
         System.out.println(greenTicket(1,2,3)); // should be 0
@@ -113,7 +117,7 @@ public class Runner {
     public static int[] makeEnds(int[] nums) {
         int first = nums[0];
         int last = nums[nums.length - 1];
-        int[] returnNums = {first, last};
+        int[] returnNums = {first,last};
         return returnNums;
     }
 
